@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Number Converter</title>
+    <link rel="stylesheet" href="1.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Advanced Number Converter</h2>
+
+        <input type="text" id="inputValue" placeholder="Enter a number">
+        
+        <select id="conversionType">
+            <option value="binaryToGray">Binary → Gray Code</option>
+            <option value="grayToBinary">Gray Code → Binary</option>
+            <option value="signedOneComplement">Signed One’s Complement</option>
+            <option value="signedTwoComplement">Signed Two’s Complement</option>
+            <option value="baseConversion">Base Conversion</option>
+        </select>
+
+        <select id="fromBase" class="hide">
+            <option value="2">Binary</option>
+            <option value="8">Octal</option>
+            <option value="10" selected>Decimal</option>
+            <option value="16">Hexadecimal</option>
+        </select>
+
+        <select id="toBase" class="hide">
+            <option value="2">Binary</option>
+            <option value="8">Octal</option>
+            <option value="10">Decimal</option>
+            <option value="16">Hexadecimal</option>
+        </select>
+
+        <button onclick="convert()">Convert</button>
+        <button onclick="resetConverter()">Reset</button>
+
+        <div id="result-box">
+            <h3>Result:</h3>
+            <p id="result">---</p>
+            <button onclick="copyResult()">Copy</button>
+            <button onclick="speakResult()">🔊 Speak</button>
+        </div>
+    </div>
+
+    <script src="1.js"></script>
+</body>
+</html>
